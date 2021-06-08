@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<PreferenceScreen
+		xmlns:android="http://schemas.android.com/apk/res/android">
+		<PreferenceCategory
+			android:title="桌面部件">
+			
+			<Preference
+				android:title="一号部件(2x2)"
+				android:key="preference_first_widget"/>
+			
+			<Preference
+				android:title="二号部件(3x2)"
+				android:key="preference_second_widget"/>
+			
+			<Preference
+				android:title="三号部件(3x3)"
+				android:key="preference_third_widget"/>
+			
+		</PreferenceCategory>
+		
+	</PreferenceScreen>

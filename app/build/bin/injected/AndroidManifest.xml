@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	package="breeze.desk.picmodel"
+	android:versionCode="1"
+	android:versionName="1.0">
+
+	<uses-sdk
+		android:minSdkVersion="14"
+		android:targetSdkVersion="23"/>
+
+	<uses-permission
+		android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+	<application
+		android:allowBackup="true"
+		android:icon="@drawable/icon"
+		android:label="@string/app_name"
+		android:theme="@style/AppTheme"
+		android:resizeableActivity="true">
+
+		<activity
+			android:name=".MainActivity"
+			android:label="@string/app_name">
+
+			<intent-filter>
+
+				<action
+					android:name="android.intent.action.MAIN"/>
+
+				<category
+					android:name="android.intent.category.LAUNCHER"/>
+
+			</intent-filter>
+
+		</activity>
+
+		<receiver
+			android:name="breeze.desk.picmodel.widgets.AppWidgetFirst">
+
+			<intent-filter>
+
+				<action
+					android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+
+				<action
+					android:name="breeze.desk.picmodel.fragment.UPDATE_APPWIDGET"/>
+
+			</intent-filter>
+
+			<meta-data
+				android:name="android.appwidget.provider"
+				android:resource="@xml/widget_first"/>
+
+		</receiver>
+
+		<receiver
+			android:name="breeze.desk.picmodel.widgets.AppWidgetSecond">
+
+			<intent-filter>
+
+				<action
+					android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+
+				<action
+					android:name="breeze.desk.picmodel.fragment.UPDATE_APPWIDGET"/>
+
+			</intent-filter>
+
+			<meta-data
+				android:name="android.appwidget.provider"
+				android:resource="@xml/widget_second"/>
+
+		</receiver>
+
+		<receiver
+			android:name="breeze.desk.picmodel.widgets.AppWidgetThird">
+
+			<intent-filter>
+
+				<action
+					android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+
+				<action
+					android:name="breeze.desk.picmodel.fragment.UPDATE_APPWIDGET"/>
+
+			</intent-filter>
+
+			<meta-data
+				android:name="android.appwidget.provider"
+				android:resource="@xml/widget_third"/>
+
+		</receiver>
+
+		<activity
+			android:name="com.yalantis.ucrop.UCropActivity"
+			android:screenOrientation="portrait"
+			android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+
+		<meta-data
+			android:name="android.max_aspect"
+			android:value="4.0"/>
+
+	</application>
+
+</manifest>
+
